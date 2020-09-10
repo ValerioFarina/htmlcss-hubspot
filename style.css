@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+}
+
+header nav .left {
+    float: left;
+}
+
+header nav .right {
+    float: right;
+}
+
+header nav .container {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header nav .right button {
+    padding: 10px;
+}
+
+header nav.top {
+    background: #80808033;
+}
+
+header nav a {
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+}
+
+header nav a.language {
+    border-right: 1px solid black;
+}
+
+header nav.bottom .logo img {
+    width: 100px;
+}
+
+header nav.bottom .right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+header > .bottom-section {
+    background-color: #4c6782;
+    color: white;
+}
