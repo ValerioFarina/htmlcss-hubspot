@@ -10,6 +10,7 @@ body {
 }
 
 p {
+    margin: 20px 0;
     line-height: 25px;
 }
 
@@ -29,7 +30,7 @@ header nav .right {
     float: right;
 }
 
-header nav .container {
+header nav .container::after {
     content: "";
     display: table;
     clear: both;
@@ -88,11 +89,74 @@ header .bottom-section p {
     font-size: 60px;
 }
 
-.jumbotron p {
-    margin: 20px 0;
-}
-
 .jumbotron button {
     padding: 30px;
 }
 /* --- Fine jumbotron --- */
+
+main {
+    background: #80808033;
+}
+
+main .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main .box {
+    margin: 15px;
+    float: left;
+    height: 500px;
+    width: calc(33.3333333% - 30px);
+}
+
+main .box h2 {
+    font-size: 40px;
+}
+
+main .box {
+    padding: 15px;
+}
+
+main .box.get {
+    background-color: white;
+}
+
+main .box.get h3 {
+    margin-top: 60px; 
+}
+
+main .box.get p {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.box.get .popular-features {
+    margin-bottom: 20px;
+}
+
+.box.get .popular-features h4 {
+    margin-bottom: 20px;
+}
+
+.box.get .popular-features ul {
+    list-style-type: none;
+}
+
+.box.get .popular-features li {
+    margin: 10px 0;
+}
+
+.box.get .popular-features i {
+    font-size: 8px;
+    color: white;
+    background-color: orange;
+    border-radius: 100%;
+    padding: 4px;
+}
+
+.box.get button {
+    width: 100%;
+    padding: 20px;
+}
