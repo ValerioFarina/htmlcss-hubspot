@@ -5,8 +5,9 @@
 }
 
 body {
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     font-family: sans-serif;
+    color: #33475b;
 }
 
 p {
@@ -14,55 +15,124 @@ p {
     line-height: 25px;
 }
 
+button {
+    color: white;
+    background-color: rgb(255, 122, 89);
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+button:hover {
+    background-color: rgb(255, 122, 89, 0.5);
+}
+
 .container {
-    position: relative;
     width: 80%;
     margin: auto;
-    padding: 15px;
+    padding: 25px 0;
 }
 
 /* --- Inizio header --- */
-header nav .left {
-    float: left;
+nav a {
+    display: inline-block;
+    padding: 10px;
+    height: 50px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #33475b;
 }
 
-header nav .right {
-    float: right;
-}
-
-header nav .container::after {
+nav .container::after {
     content: "";
     display: table;
     clear: both;
 }
 
-header nav .right button {
-    padding: 10px;
-}
-
-header nav.top {
-    background: #80808033;
-}
-
-header nav a {
+nav .left {
     float: left;
-    padding: 10px;
-    text-decoration: none;
 }
 
-header nav a.language {
+nav .right {
+    float: right;
+}
+
+nav.top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #f5f8fa;
+    border-bottom: 1px solid #80808052;
+}
+
+nav.top .left > div {
+    display: inline-block;
+}
+
+nav.top .left .language {
+    position: relative;
     border-right: 1px solid black;
 }
 
-header nav.bottom .logo img {
-    width: 100px;
+nav.top .left .language .menu {
+    position: absolute;
+    display: none;
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    background-color: white;
 }
 
-header nav.bottom .right {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translate(0, -50%);
+nav.top .left .language:hover .menu {
+    display: block;
+}
+
+nav.top .left .language .menu ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+nav.top .left .language .menu li {
+    width: 100%;
+}
+
+nav.top .left .language .menu a {
+    width: 100%;
+}
+
+nav.top .left .language .menu a:hover {
+    background-color: #3cbbc83b;
+}
+
+nav.top .right input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+nav.top .right button {
+    padding: 10px;
+    height: 50px;
+}
+
+nav.top .right button.log-in {
+    padding: 10px 30px;
+    margin-right: 5px;
+}
+
+nav.bottom {
+    padding-top: 100px;
+}
+
+nav.bottom .left img {
+    height: 100%;
+}
+
+nav.bottom .left a.logo {
+    padding: 5px;
+}
+
+nav.bottom .right > ul > li {
+    display: inline-block;
 }
 
 header > .bottom-section {
@@ -70,8 +140,9 @@ header > .bottom-section {
     color: white;
 }
 
-header .bottom-section p {
-    padding: 0 20px;
+header > .bottom-section p {
+    margin: 0;
+    padding: 0 30px;
 }
 /* --- Fine header --- */
 
@@ -94,8 +165,9 @@ header .bottom-section p {
 }
 /* --- Fine jumbotron --- */
 
+/* --- Inizio main --- */
 main {
-    background: #80808033;
+    background: #f5f8fa;
 }
 
 main .container::after {
@@ -105,39 +177,48 @@ main .container::after {
 }
 
 main .box {
-    margin: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     float: left;
-    height: 500px;
     width: calc(33.3333333% - 30px);
+}
+
+main .box.center {
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
 main .box h2 {
     font-size: 40px;
 }
 
-main .box {
-    padding: 15px;
-}
-
 main .box.get {
+    padding: 65px 25px 25px 25px;
     background-color: white;
+    font-size: 90%;
 }
 
 main .box.get h3 {
-    margin-top: 60px; 
+    display: inline-block;
+    font-size: 25px;
+}
+
+main .box.get > i {
+    font-size: 25px;
 }
 
 main .box.get p {
-    padding-bottom: 20px;
-    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    margin: 30px 0;
+    border-bottom: 1px solid #80808038;
 }
 
 .box.get .popular-features {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .box.get .popular-features h4 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .box.get .popular-features ul {
@@ -151,7 +232,7 @@ main .box.get p {
 .box.get .popular-features i {
     font-size: 8px;
     color: white;
-    background-color: orange;
+    background-color: rgb(255, 122, 89);
     border-radius: 100%;
     padding: 4px;
 }
@@ -160,3 +241,9 @@ main .box.get p {
     width: 100%;
     padding: 20px;
 }
+
+.box.get:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 50px -5px rgba(51,71,91,0.12);
+}
+/* --- Fine main --- */
