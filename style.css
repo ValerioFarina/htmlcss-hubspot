@@ -64,6 +64,7 @@ nav.top {
     left: 0;
     background: #f5f8fa;
     border-bottom: 1px solid #80808052;
+    z-index: 1;
 }
 
 nav.top .left > div {
@@ -247,3 +248,56 @@ main .box.get p {
     box-shadow: 0 10px 50px -5px rgba(51,71,91,0.12);
 }
 /* --- Fine main --- */
+
+/* --- Inizio sezione info --- */
+section.info {
+    text-align: center;
+    background-color: #00a4bd;
+    color: white;
+    line-height: 40px;
+    padding: 100px 0;
+}
+
+section.info .text {
+    width: 60%;
+    margin: auto;
+}
+
+section.info h3 {
+    font-size: 30px;
+}
+
+section.info .table {
+    margin-top: 80px;
+}
+
+section.info .table .row.first {
+    border-bottom: 1px solid white;
+}
+
+section.info .table .cell {
+    float: left;
+    width: calc(100% / 4);
+    border-right: 1px solid white;
+    padding: 20px 0;
+}
+
+section.info .table .cell:last-child {
+    border: 0;
+}
+
+section.info .table .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section.info .table .cell > i {
+    font-size: 30px;
+}
+
+section.info .table .cell > h4 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+/* --- Fine sezione info --- */
