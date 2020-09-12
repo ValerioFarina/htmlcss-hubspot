@@ -12,7 +12,7 @@ body {
 
 p {
     margin: 20px 0;
-    line-height: 25px;
+    line-height: 35px;
 }
 
 button {
@@ -28,7 +28,7 @@ button:hover {
 }
 
 .container {
-    width: 80%;
+    width: 75%;
     margin: auto;
     padding: 25px 0;
 }
@@ -41,6 +41,11 @@ nav a {
     line-height: 30px;
     text-decoration: none;
     color: #33475b;
+    font-weight: 600;
+}
+
+nav a > span.arrow {
+    color: #567697c7;
 }
 
 nav .container::after {
@@ -64,7 +69,7 @@ nav.top {
     left: 0;
     background: #f5f8fa;
     border-bottom: 1px solid #80808052;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav.top .left > div {
@@ -73,7 +78,7 @@ nav.top .left > div {
 
 nav.top .left .language {
     position: relative;
-    border-right: 1px solid black;
+    border-right: 1px solid #80808038;;
 }
 
 nav.top .left .language .menu {
@@ -105,12 +110,27 @@ nav.top .left .language .menu a:hover {
     background-color: #3cbbc83b;
 }
 
-nav.top .right input {
+nav.top .right .search input {
+    background: #f5f8fa;
     padding: 5px;
-    margin-right: 5px;
+    border: 1px solid #00b8ffbf;
+    border-radius: 5px;
+    box-shadow: 0 0 15px -5px #00b8ffbf;
 }
 
-nav.top .right button {
+nav.top .right .search button {
+    padding: 5px 5px 5px 0;
+    background: #f5f8fa;
+    color: #0089ffbf;
+    font-size: 17px;
+}
+
+nav.top .right .search {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav.top .right > button {
     padding: 10px;
     height: 50px;
 }
@@ -118,6 +138,13 @@ nav.top .right button {
 nav.top .right button.log-in {
     padding: 10px 30px;
     margin-right: 5px;
+    background-color: white;
+    color: rgb(255, 122, 89);
+    border: 1px solid rgb(255, 122, 89);
+}
+
+nav.top .right button.log-in:hover {
+    background-color: rgb(255, 122, 89, 0.1);
 }
 
 nav.bottom {
@@ -129,7 +156,7 @@ nav.bottom .left img {
 }
 
 nav.bottom .left a.logo {
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 nav.bottom .right > ul > li {
@@ -145,11 +172,22 @@ header > .bottom-section p {
     margin: 0;
     padding: 0 30px;
 }
+
+header > .bottom-section p > a {
+    color: white;
+}
+
+header > .bottom-section p > a:hover {
+    color: #81d1fc;
+}
 /* --- Fine header --- */
 
 /* --- Inizio jumbotron --- */
 .jumbotron {
-    background-color: #ebc493e8;
+    position: relative;
+    padding: 20px 0 200px 0;
+    background-color: #ebc3b447;
+    border-bottom: 8px solid #000000a8;
 }
 
 .jumbotron .box {
@@ -158,16 +196,30 @@ header > .bottom-section p {
 }
 
 .jumbotron h1 {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .jumbotron button {
     padding: 30px;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron .button-footer {
+    width: 50%;
+}
+
+.jumbotron > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 /* --- Fine jumbotron --- */
 
 /* --- Inizio main --- */
 main {
+    padding: 60px 0;
     background: #f5f8fa;
 }
 
@@ -301,6 +353,76 @@ section.info .table .cell > h4 {
     margin: 10px 0;
 }
 /* --- Fine sezione info --- */
+
+/* --- Inizio sezione customers --- */
+section.customers {
+    padding: 80px 0;
+}
+
+section.customers .left {
+    width: 45%;
+    float: left;
+    padding-top: 20px;
+}
+
+section.customers .right {
+    width: 55%;
+    float: left;
+}
+
+section.customers .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section.customers .top {
+    margin-bottom: 80px;
+}
+
+section.customers .left h3 {
+    font-size: 40px;
+}
+
+section.customers .left .top {
+    padding-right: 80px;
+}
+
+section.customers .left .bottom {
+    padding-top: 100px;
+}
+
+section.customers .left .bottom button {
+    padding: 30px;
+    font-size: 20px;
+}
+
+section.customers .right .top .logo {
+    float: left;
+    width: calc(100% / 4);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+section.customers .right .top .logo img {
+    width: 100%;
+}
+
+section.customers .right .top::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section.customers .right .bottom .image {
+    float: right;
+    width: 60%;
+}
+
+section.customers .right .bottom img {
+    width: 100%;
+}
+/* --- Fine sezione customers --- */
 
 /* --- Inizio footer --- */
 footer {
