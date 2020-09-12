@@ -255,9 +255,9 @@ main .box h2 {
 }
 
 main .box.get {
-    padding: 50px 25px 25px 25px;
+    padding: 70px 25px 25px 25px;
     background-color: white;
-    font-size: 90%;
+    font-size: 80%;
 }
 
 main .box.get h3 {
@@ -267,11 +267,13 @@ main .box.get h3 {
 
 main .box.get > i {
     font-size: 25px;
+    color: rgb(255, 122, 89);
 }
 
 main .box.get p {
     padding-bottom: 30px;
     margin: 30px 0;
+    font-size: 90%;
     border-bottom: 1px solid #80808038;
 }
 
@@ -285,6 +287,7 @@ main .box.get p {
 
 .box.get .popular-features ul {
     list-style-type: none;
+    font-size: 90%;
 }
 
 .box.get .popular-features li {
