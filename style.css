@@ -6,12 +6,15 @@
 
 body {
     letter-spacing: 0.5px;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #33475b;
+    font-size: 19px;
+    font-weight: 300;
 }
 
 p {
     margin: 20px 0;
+    font-size: 17px;
     line-height: 35px;
 }
 
@@ -42,6 +45,7 @@ nav a {
     text-decoration: none;
     color: #33475b;
     font-weight: 600;
+    font-size: 90%;
 }
 
 nav a > span.arrow {
@@ -111,11 +115,16 @@ nav.top .left .language .menu a:hover {
 }
 
 nav.top .right .search input {
+    display: none;
     background: #f5f8fa;
     padding: 5px;
     border: 1px solid #00b8ffbf;
     border-radius: 5px;
     box-shadow: 0 0 15px -5px #00b8ffbf;
+}
+
+nav.top .right .search:hover input {
+    display: inline-block;
 }
 
 nav.top .right .search button {
@@ -304,7 +313,7 @@ main .box.get p {
 /* --- Inizio sezione info --- */
 section.info {
     text-align: center;
-    background-color: #00a4bd;
+    background-image: linear-gradient(45deg, #00a4bd, #00bda5);
     color: white;
     line-height: 40px;
     padding: 100px 0;
@@ -351,6 +360,25 @@ section.info .table .cell > i {
 section.info .table .cell > h4 {
     font-size: 50px;
     margin: 10px 0;
+}
+
+section.info .table .cell > h4.plus{
+    padding-right: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+section.info .table .cell > h4.plus::after {
+    content: "+";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+}
+
+section.info .table .row.second img#speciale {
+    height: 33px;
 }
 /* --- Fine sezione info --- */
 
@@ -414,6 +442,14 @@ section.customers .right .top::after {
     clear: both;
 }
 
+section.customers .right .top .row.first .logo {
+    transform: translate(0, calc((100% - 60px) / -2));
+}
+
+section.customers .right .top .row.second .logo {
+    transform: translate(0, calc((100% - 66px) / -2));
+}
+
 section.customers .right .bottom .image {
     float: right;
     width: 60%;
@@ -470,6 +506,16 @@ footer a:hover {
     display: inline-block;
     padding: 15px 0;
     width: 100%;
+    font-size: 80%;
+}
+
+.actions-menu .action .menu {
+    display: none;
+    font-size: 80%;
+}
+
+.actions-menu .action .tools-generators:hover .menu {
+    display: block;
 }
 
 footer .contacts {
