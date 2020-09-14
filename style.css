@@ -9,7 +9,6 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     color: #33475b;
     font-size: 19px;
-    font-weight: 300;
 }
 
 p {
@@ -45,18 +44,11 @@ nav a {
     line-height: 30px;
     text-decoration: none;
     color: #33475b;
-    font-weight: 600;
     font-size: 90%;
 }
 
 nav a > span.arrow {
     color: #567697c7;
-}
-
-nav .container::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 nav .left {
@@ -67,14 +59,20 @@ nav .right {
     float: right;
 }
 
+nav .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 nav.top {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    background: #f5f8fa;
-    border-bottom: 1px solid #80808052;
+    width: 100%;
     z-index: 2;
+    border-bottom: 1px solid #80808052;
+    background: #f5f8fa;
 }
 
 nav.top .left > div {
@@ -83,7 +81,7 @@ nav.top .left > div {
 
 nav.top .left .language {
     position: relative;
-    border-right: 1px solid #80808038;;
+    border-right: 1px solid #80808038;
 }
 
 nav.top .left .language .menu {
@@ -92,6 +90,8 @@ nav.top .left .language .menu {
     width: calc(100% - 10px);
     margin-left: 10px;
     background-color: white;
+    box-shadow: 0 10px 50px -5px rgba(51,71,91,0.3);
+    border-radius: 5px;
 }
 
 nav.top .left .language:hover .menu {
@@ -100,11 +100,6 @@ nav.top .left .language:hover .menu {
 
 nav.top .left .language .menu ul {
     list-style-type: none;
-    width: 100%;
-}
-
-nav.top .left .language .menu li {
-    width: 100%;
 }
 
 nav.top .left .language .menu a {
@@ -115,12 +110,17 @@ nav.top .left .language .menu a:hover {
     background-color: #3cbbc83b;
 }
 
+nav.top .right .search {
+    display: inline-block;
+    margin-right: 25px;
+}
+
 nav.top .right .search input {
     display: none;
-    background: #f5f8fa;
     padding: 5px;
     border: 1px solid #00b8ffbf;
     border-radius: 5px;
+    background: #f5f8fa;
     box-shadow: 0 0 15px -5px #00b8ffbf;
 }
 
@@ -130,27 +130,22 @@ nav.top .right .search:hover input {
 
 nav.top .right .search button {
     padding: 5px 5px 5px 0;
+    font-size: 17px;
     background: #f5f8fa;
     color: #0089ffbf;
-    font-size: 17px;
-}
-
-nav.top .right .search {
-    display: inline-block;
-    margin-right: 25px;
 }
 
 nav.top .right > button {
-    padding: 10px;
     height: 50px;
+    padding: 10px;
 }
 
 nav.top .right button.log-in {
     padding: 10px 30px;
     margin-right: 5px;
+    border: 1px solid rgb(255, 122, 89);
     background-color: white;
     color: rgb(255, 122, 89);
-    border: 1px solid rgb(255, 122, 89);
 }
 
 nav.top .right button.log-in:hover {
@@ -171,6 +166,53 @@ nav.bottom .left a.logo {
 
 nav.bottom .right > ul > li {
     display: inline-block;
+    position: relative;
+}
+
+nav.bottom .right .menu {
+    position: absolute;
+    right: 0;
+    display: none;
+    width: 800%;
+    padding: 40px;
+    z-index: 3;
+    background-color: white;
+    box-shadow: 0 10px 50px -5px rgba(51,71,91,0.3);
+    border-radius: 5px;
+}
+
+nav.bottom .right > ul > li:hover .menu {
+    display: block;
+}
+
+nav.bottom .right .menu h5 {
+    padding: 10px;
+}
+
+nav.bottom .right .menu .list {
+    float: left;
+    width: calc(100% / 3 - 10px);
+    margin: 0 5px;
+}
+
+nav.bottom .right .menu ul {
+    list-style-type: none;
+}
+
+nav.bottom .right .menu::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav.bottom .right .menu a {
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav.bottom .right .menu a:hover {
+    background-color: #3cbbc83b;
 }
 
 header > .bottom-section {
@@ -196,8 +238,8 @@ header > .bottom-section p > a:hover {
 .jumbotron {
     position: relative;
     padding: 20px 0 200px 0;
-    background-color: #ebc3b447;
     border-bottom: 8px solid #000000a8;
+    background-color: #ebc3b447;
 }
 
 .jumbotron .box {
@@ -210,10 +252,10 @@ header > .bottom-section p > a:hover {
 }
 
 .jumbotron button {
-    padding: 30px;
-    font-size: 20px;
     position: relative;
     z-index: 1;
+    padding: 30px;
+    font-size: 20px;
 }
 
 .jumbotron .button-footer {
@@ -240,10 +282,16 @@ main .row::after {
 }
 
 main .box {
-    margin-top: 15px;
-    margin-bottom: 15px;
     float: left;
     width: calc(100% / 3 - 30px);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+main .box.get {
+    padding: 70px 25px 25px 25px;
+    font-size: 80%;
+    background-color: white;
 }
 
 main .box.center {
@@ -253,12 +301,6 @@ main .box.center {
 
 main .box h2 {
     font-size: 40px;
-}
-
-main .box.get {
-    padding: 70px 25px 25px 25px;
-    background-color: white;
-    font-size: 80%;
 }
 
 main .box.get h3 {
@@ -274,8 +316,8 @@ main .box.get > i {
 main .box.get p {
     padding-bottom: 30px;
     margin: 30px 0;
-    font-size: 90%;
     border-bottom: 1px solid #80808038;
+    font-size: 90%;
 }
 
 .box.get .popular-features {
@@ -296,11 +338,11 @@ main .box.get p {
 }
 
 .box.get .popular-features i {
+    padding: 4px;
     font-size: 8px;
+    border-radius: 100%;
     color: white;
     background-color: rgb(255, 122, 89);
-    border-radius: 100%;
-    padding: 4px;
 }
 
 .box.get button {
@@ -316,11 +358,11 @@ main .box.get p {
 
 /* --- Inizio sezione info --- */
 section.info {
+    padding: 100px 0;
+    line-height: 40px;
     text-align: center;
     background-image: linear-gradient(45deg, #00a4bd, #00bda5);
     color: white;
-    line-height: 40px;
-    padding: 100px 0;
 }
 
 section.info .text {
@@ -362,14 +404,14 @@ section.info .table .cell > i {
 }
 
 section.info .table .cell > h4 {
-    font-size: 50px;
     margin: 10px 0;
+    font-size: 50px;
 }
 
 section.info .table .cell > h4.plus{
-    padding-right: 15px;
     position: relative;
     display: inline-block;
+    padding-right: 15px;
 }
 
 section.info .table .cell > h4.plus::after {
@@ -392,14 +434,14 @@ section.customers {
 }
 
 section.customers .left {
-    width: 45%;
     float: left;
+    width: 45%;
     padding-top: 20px;
 }
 
 section.customers .right {
-    width: 55%;
     float: left;
+    width: 55%;
 }
 
 section.customers .container::after {
@@ -502,7 +544,7 @@ footer a:hover {
     margin-bottom: 10px;
 }
 
-.actions-menu ul {
+.actions-menu .action ul {
     list-style-type: none;
 }
 
@@ -513,7 +555,7 @@ footer a:hover {
     font-size: 80%;
 }
 
-.actions-menu .action .menu {
+.actions-menu .action .tools-generators .menu {
     display: none;
     font-size: 80%;
 }
@@ -523,16 +565,16 @@ footer a:hover {
 }
 
 footer .contacts {
-    width: calc((100% / 4) - ((25px * 3) / 4));
     float: right;
+    width: calc((100% / 4) - ((25px * 3) / 4));
 }
 
 footer .contacts button {
+    height: 50px;
+    padding: 10px;
     margin: 20px 0;
     background-color: white;
     color: black;
-    padding: 10px;
-    height: 50px;
 }
 
 footer .contacts button:hover {
@@ -540,10 +582,10 @@ footer .contacts button:hover {
 }
 
 footer .contacts .icons a {
-    font-size: 26.6px;
     float: left;
     width: calc((100% / 6) - ((25px * 5) / 6));
     margin-right: 25px;
+    font-size: 26.6px;
 }
 
 footer .contacts .icons a.last {
@@ -610,6 +652,7 @@ footer .bottom .right a {
 }
 /* --- Fine footer --- */
 
+/* Inizio chat */
 #chat {
     position: fixed;
     bottom: 0;
@@ -673,3 +716,4 @@ footer .bottom .right a {
     background: rgb(66, 91, 118);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
 }
+/* Fine chat */
